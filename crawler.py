@@ -49,10 +49,10 @@ class Crawler:
         # y = 86
         if not self.open_status:
             pyautogui.click(x=x, y=y)
-            time.sleep(5)
+            time.sleep(50)
         if self.open_status:
             pyautogui.click(x=x, y=y)
-            time.sleep(5)
+            time.sleep(50)
         self.open_status = True
 
     def get_soup(self):
@@ -230,13 +230,12 @@ class Crawler:
 
 datas = []
 
-arr=get_numbers_without_json('data/json', range(80, 1331))
+arr=get_numbers_without_json('data/json', range(9, 368))
 print(arr)
 for i in arr:
-    datas.append({'url': 'https://onlinemicrofiche.com/riva_normal/showmodel/13/yamahaob/'+str(i), 'name': 'yamahaatv-'+str(i)})
+    datas.append({'url': 'https://onlinemicrofiche.com/riva_normal/showmodel/13/yamahajb/'+str(i), 'name': 'yamahaatv-'+str(i)})
 
 # Định nghĩa đối tượng Lock
-lock = threading.Lock()
 
 def process_data(data):
     check = True
@@ -247,14 +246,11 @@ def process_data(data):
             crawler = Crawler(data['url'])
         result = crawler.get_infor_children()
         if not result:
-            with lock:
-                # Giữ lock trước khi vào khối mã quan trọng
-                print("waiting...")
-                crawler.open_windscribe()
-                time.sleep(5)
-                # Thả lock sau khi ra khỏi khối mã quan trọng
+            print("waiting...")
+            time.sleep(500000)
+            crawler.open_windscribe()
         else:
             check = False
 
-with concurrent.futures.ThreadPoolExecutor(max_workers=1) as executor:
+with concurrent.futures.ThreadPoolExecutor(max_workers=6) as executor:
     executor.map(process_data, datas)
