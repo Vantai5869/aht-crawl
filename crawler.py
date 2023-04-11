@@ -1,12 +1,14 @@
 import json
+import threading
 import re
 import time
 from datetime import datetime
-
+import concurrent.futures
 import pyautogui
 import requests as req
 from bs4 import BeautifulSoup as bs
 import os
+from src.helper import *
 
 proxies = ['200.54.194.13:53281', '45.42.177.58:3128', '200.105.215.22:33630', '86.120.122.3:3128',
            '190.61.88.147:8080']
@@ -38,17 +40,19 @@ class Crawler:
         return result
 
     def open_windscribe(self):
-        os.startfile('C:\\Program Files\\Windscribe\\Windscribe.exe')
+        # os.startfile('C:\\Program Files\\Windscribe\\Windscribe.exe')
+        os.startfile('C:\\Program Files (x86)\\Proton Technologies\\ProtonVPN\\ProtonVPN.exe')
         time.sleep(3)
-        x = 1054
-        y = 455
+        x = 555
+        y = 400
         # x = 330
         # y = 86
         if not self.open_status:
             pyautogui.click(x=x, y=y)
+            time.sleep(5)
         if self.open_status:
-            time.sleep(3)
             pyautogui.click(x=x, y=y)
+            time.sleep(5)
         self.open_status = True
 
     def get_soup(self):
@@ -185,32 +189,56 @@ class Crawler:
                 except Exception as e:
                     print(e)
                     continue
+            
             children.update({'infor': result})
             # print(children)
 
-        with open(self.path + '/json/' + self.name + '.json', 'w', encoding='utf-8') as f:
-            json.dump(children_s, f, indent=4, ensure_ascii=False)
-        return children_s
+        if len(result) != 0:
+            with open(self.path + '/json/' + self.name + '.json', 'w', encoding='utf-8') as f:
+                json.dump(children_s, f, indent=4, ensure_ascii=False)
+        return result
 
 
 # muốn lưu file html thì truyền thêm save_file=True (mặc định là False)
 # muốn lưu file theo tên thì truyền thêm name (mặc định là None)
 # crawler = Crawler(url_,name='suzuki')
 # truyền thêm tên file json
+
+
+
+# datas = []
+# for i in range(300, 1331):
+#    datas.append( {'url': 'https://onlinemicrofiche.com/riva_normal/showmodel/13/yamahaob/'+str(i), 'name': 'yamahaatv-'+str(i)})
+
+
+# for data in datas:
+#     check = True
+#     while check:
+#         if data['name'] and data['name'] != '' and data['name'] is not None:
+#             crawler = Crawler(data['url'], name=data['name'])
+#         else:
+#             crawler = Crawler(data['url'])
+#         result = crawler.get_infor_children()
+#         if not result:
+#             crawler.open_windscribe()
+#             time.sleep(5)
+#         else:
+#             check = False
+
+
+
+
 datas = []
-for i in range(121, 1331):
-   datas.append( {'url': 'https://onlinemicrofiche.com/riva_normal/showmodel/13/yamahaob/'+str(i), 'name': 'yamahaatv-'+str(i)})
 
+arr=get_numbers_without_json('data/json', range(80, 1331))
+print(arr)
+for i in arr:
+    datas.append({'url': 'https://onlinemicrofiche.com/riva_normal/showmodel/13/yamahaob/'+str(i), 'name': 'yamahaatv-'+str(i)})
 
-# getLink = Crawler('https://rivaracing.com/oem-parts')
-# time.sleep(5)
-# children_s = getLink.TPV_CATEget_children_s();
-    # for children in children_s:
-    #     name = children.text.strip()
-    #     link = children.find('a', target='_top').get('href')
-    #     print(link)
+# Định nghĩa đối tượng Lock
+lock = threading.Lock()
 
-for data in datas:
+def process_data(data):
     check = True
     while check:
         if data['name'] and data['name'] != '' and data['name'] is not None:
@@ -219,7 +247,14 @@ for data in datas:
             crawler = Crawler(data['url'])
         result = crawler.get_infor_children()
         if not result:
-            crawler.open_windscribe()
-            time.sleep(5)
+            with lock:
+                # Giữ lock trước khi vào khối mã quan trọng
+                print("waiting...")
+                crawler.open_windscribe()
+                time.sleep(5)
+                # Thả lock sau khi ra khỏi khối mã quan trọng
         else:
             check = False
+
+with concurrent.futures.ThreadPoolExecutor(max_workers=1) as executor:
+    executor.map(process_data, datas)

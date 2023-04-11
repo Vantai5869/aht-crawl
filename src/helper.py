@@ -32,6 +32,22 @@ def list_to_string(my_list, separator=', '):
             return None
     return separator.join(my_list)
 
+import os
+
+def get_numbers_without_json(folder_path, a):
+    # Tạo một danh sách các số xuất hiện trong tên file JSON
+    json_numbers = []
+    for file_name in os.listdir(folder_path):
+        if file_name.endswith(".json"):
+            json_number = file_name.split("-")[1].split(".")[0]  # Lấy số trong tên file
+            json_numbers.append(json_number)
+
+    # Tạo một danh sách các phần tử của mảng a không xuất hiện trong danh sách số của các file JSON
+    a_without_json_numbers = [x for x in a if str(x) not in json_numbers]
+
+    return a_without_json_numbers
+
+
 
 # inpit file
 def initColumn(writer):

@@ -7428,9 +7428,170 @@
         "link": "https://onlinemicrofiche.com/riva_normal/showmodel/13/yamahaob/107/5",
         "full_name": "2001 Yamaha Outboard Motors F9.9MSHZ - VALVE",
         "image_src": "https://images.imagessite.com/OEM_IMAGES/yamaha_ob_images_small/Y01F99MSHZ04.gif",
-        "nameChildren": null,
-        "breadcrumb_menu": null,
-        "model": null,
-        "infor": []
+        "nameChildren": "VALVE",
+        "breadcrumb_menu": "Yamaha /  Outboard Motors  /  2001",
+        "model": "2001 F9.9MSHZ",
+        "infor": [
+            {
+                "parts_list_HLSM_PartNo": "1534215480",
+                "parts_list_PartNo": "6G8-12111-00-00",
+                "parts_list_PartNo_RefNo": "1",
+                "parts_list_RefNo": "1",
+                "parts_list_descrip": "6G8-12111-00-00VALVE, INTAKE",
+                "parts_list_SalePrice": "38.65",
+                "parts_list_QtyReq": "2",
+                "image_main": "https://images.imagessite.com/OEM_IMAGES/yamaha_ob_images/Y01F99MSHZ04.gif"
+            },
+            {
+                "parts_list_HLSM_PartNo": "1534215486",
+                "parts_list_PartNo": "6G8-12121-01-00",
+                "parts_list_PartNo_RefNo": "2",
+                "parts_list_RefNo": "2",
+                "parts_list_descrip": "6G8-12121-01-00VALVE, EXHAUST",
+                "parts_list_SalePrice": "50.10",
+                "parts_list_QtyReq": "2",
+                "image_main": "https://images.imagessite.com/OEM_IMAGES/yamaha_ob_images/Y01F99MSHZ04.gif"
+            },
+            {
+                "parts_list_HLSM_PartNo": "1534215482",
+                "parts_list_PartNo": "6G8-12116-00-00",
+                "parts_list_PartNo_RefNo": "3",
+                "parts_list_RefNo": "3",
+                "parts_list_descrip": "6G8-12116-00-00SEAT, VALVE SPRING",
+                "parts_list_SalePrice": "4.90",
+                "parts_list_QtyReq": "4",
+                "image_main": "https://images.imagessite.com/OEM_IMAGES/yamaha_ob_images/Y01F99MSHZ04.gif"
+            },
+            {
+                "parts_list_HLSM_PartNo": "1534215481",
+                "parts_list_PartNo": "6G8-12113-00-00",
+                "parts_list_PartNo_RefNo": "4",
+                "parts_list_RefNo": "4",
+                "parts_list_descrip": "6G8-12113-00-00SPRING, VALVE INNER",
+                "parts_list_SalePrice": "15.75",
+                "parts_list_QtyReq": "4",
+                "image_main": "https://images.imagessite.com/OEM_IMAGES/yamaha_ob_images/Y01F99MSHZ04.gif"
+            },
+            {
+                "parts_list_HLSM_PartNo": "1534215483",
+                "parts_list_PartNo": "6G8-12117-00-00",
+                "parts_list_PartNo_RefNo": "5",
+                "parts_list_RefNo": "5",
+                "parts_list_descrip": "6G8-12117-00-00RETAINER, VALVE SPRING",
+                "parts_list_SalePrice": "15.75",
+                "parts_list_QtyReq": "2",
+                "image_main": "https://images.imagessite.com/OEM_IMAGES/yamaha_ob_images/Y01F99MSHZ04.gif"
+            },
+            {
+                "parts_list_HLSM_PartNo": "153484155",
+                "parts_list_PartNo": "30X-12118-00-00",
+                "parts_list_PartNo_RefNo": "6",
+                "parts_list_RefNo": "6",
+                "parts_list_descrip": "30X-12118-00-00COTTER, VALVE",
+                "parts_list_SalePrice": "4.20",
+                "parts_list_QtyReq": "4",
+                "image_main": "https://images.imagessite.com/OEM_IMAGES/yamaha_ob_images/Y01F99MSHZ04.gif"
+            },
+            {
+                "parts_list_HLSM_PartNo": "1534215484",
+                "parts_list_PartNo": "6G8-12117-10-00",
+                "parts_list_PartNo_RefNo": "7",
+                "parts_list_RefNo": "7",
+                "parts_list_descrip": "6G8-12117-10-00RETAINER, VALVE SPRING",
+                "parts_list_SalePrice": "0.00",
+                "parts_list_QtyReq": "2",
+                "image_main": "https://images.imagessite.com/OEM_IMAGES/yamaha_ob_images/Y01F99MSHZ04.gif"
+            },
+            {
+                "parts_list_HLSM_PartNo": "1534215489",
+                "parts_list_PartNo": "6G8-12153-00-00",
+                "parts_list_PartNo_RefNo": "8",
+                "parts_list_RefNo": "8",
+                "parts_list_descrip": "6G8-12153-00-00LIFTER, VALVE",
+                "parts_list_SalePrice": "22.35",
+                "parts_list_QtyReq": "2",
+                "image_main": "https://images.imagessite.com/OEM_IMAGES/yamaha_ob_images/Y01F99MSHZ04.gif"
+            },
+            {
+                "parts_list_HLSM_PartNo": "1534144862",
+                "parts_list_PartNo": "51Y-12119-00-00",
+                "parts_list_PartNo_RefNo": "9",
+                "parts_list_RefNo": "9",
+                "parts_list_descrip": "51Y-12119-00-00SEAL, VALVE STEM",
+                "parts_list_SalePrice": "5.99",
+                "parts_list_QtyReq": "4",
+                "image_main": "https://images.imagessite.com/OEM_IMAGES/yamaha_ob_images/Y01F99MSHZ04.gif"
+            },
+            {
+                "parts_list_HLSM_PartNo": "1534215488",
+                "parts_list_PartNo": "6G8-12151-00-00",
+                "parts_list_PartNo_RefNo": "10",
+                "parts_list_RefNo": "10",
+                "parts_list_descrip": "6G8-12151-00-00ARM, VALVE ROCKER",
+                "parts_list_SalePrice": "0.00",
+                "parts_list_QtyReq": "4",
+                "image_main": "https://images.imagessite.com/OEM_IMAGES/yamaha_ob_images/Y01F99MSHZ04.gif"
+            },
+            {
+                "parts_list_HLSM_PartNo": "1534215491",
+                "parts_list_PartNo": "6G8-12159-00-00",
+                "parts_list_PartNo_RefNo": "11",
+                "parts_list_RefNo": "11",
+                "parts_list_descrip": "6G8-12159-00-00SCREW, VALVE ADJUSTING",
+                "parts_list_SalePrice": "4.90",
+                "parts_list_QtyReq": "4",
+                "image_main": "https://images.imagessite.com/OEM_IMAGES/yamaha_ob_images/Y01F99MSHZ04.gif"
+            },
+            {
+                "parts_list_HLSM_PartNo": "1534215490",
+                "parts_list_PartNo": "6G8-12158-00-00",
+                "parts_list_PartNo_RefNo": "12",
+                "parts_list_RefNo": "12",
+                "parts_list_descrip": "6G8-12158-00-00NUT, LOCK",
+                "parts_list_SalePrice": "5.25",
+                "parts_list_QtyReq": "4",
+                "image_main": "https://images.imagessite.com/OEM_IMAGES/yamaha_ob_images/Y01F99MSHZ04.gif"
+            },
+            {
+                "parts_list_HLSM_PartNo": "1534215487",
+                "parts_list_PartNo": "6G8-12146-00-00",
+                "parts_list_PartNo_RefNo": "13",
+                "parts_list_RefNo": "13",
+                "parts_list_descrip": "6G8-12146-00-00SHAFT, ROCKER",
+                "parts_list_SalePrice": "28.55",
+                "parts_list_QtyReq": "2",
+                "image_main": "https://images.imagessite.com/OEM_IMAGES/yamaha_ob_images/Y01F99MSHZ04.gif"
+            },
+            {
+                "parts_list_HLSM_PartNo": "1534293707",
+                "parts_list_PartNo": "90387-13M56-00",
+                "parts_list_PartNo_RefNo": "14",
+                "parts_list_RefNo": "14",
+                "parts_list_descrip": "90387-13M56-00COLLAR",
+                "parts_list_SalePrice": "6.85",
+                "parts_list_QtyReq": "3",
+                "image_main": "https://images.imagessite.com/OEM_IMAGES/yamaha_ob_images/Y01F99MSHZ04.gif"
+            },
+            {
+                "parts_list_HLSM_PartNo": "1534300441",
+                "parts_list_PartNo": "90501-12M40-00",
+                "parts_list_PartNo_RefNo": "15",
+                "parts_list_RefNo": "15",
+                "parts_list_descrip": "90501-12M40-00SPRING, COMPRESSION",
+                "parts_list_SalePrice": "4.70",
+                "parts_list_QtyReq": "3",
+                "image_main": "https://images.imagessite.com/OEM_IMAGES/yamaha_ob_images/Y01F99MSHZ04.gif"
+            },
+            {
+                "parts_list_HLSM_PartNo": "1534300442",
+                "parts_list_PartNo": "90501-12M41-00",
+                "parts_list_PartNo_RefNo": "16",
+                "parts_list_RefNo": "16",
+                "parts_list_descrip": "90501-12M41-00SPRING, COMPRESSION",
+                "parts_list_SalePrice": "8.95",
+                "parts_list_QtyReq": "1",
+                "image_main": "https://images.imagessite.com/OEM_IMAGES/yamaha_ob_images/Y01F99MSHZ04.gif"
+            }
+        ]
     }
 ]
