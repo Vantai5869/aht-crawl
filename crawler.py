@@ -231,6 +231,7 @@ class Crawler:
 datas = []
 
 arr=get_numbers_without_json('data/json/yamahajb', range(9, 368))
+# arr=get_numbers_without_json('data/json/yamahajb', range(77, 394))
 print(arr)
 for i in arr:
     datas.append({'url': 'https://onlinemicrofiche.com/riva_normal/showmodel/13/yamahajb/'+str(i), 'name': 'yamahaatv-'+str(i)})
@@ -247,7 +248,7 @@ def process_data(data):
         result = crawler.get_infor_children()
         if not result:
             print("waiting...")
-            time.sleep(5000)
+            time.sleep(5)
             crawler.open_windscribe()
         else:
             check = False
