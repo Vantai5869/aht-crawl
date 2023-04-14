@@ -126,8 +126,8 @@ class Crawler:
             image_main = soup.find('image', id='svg_gg')
             image_main = image_main.get('xlink:href') if image_main else None
 
-            if not os.path.exists(self.path + '/json/yamahajb'):
-                os.makedirs(self.path + '/json/yamahajb')
+            if not os.path.exists(self.path + '/json/yamahapwc'):
+                os.makedirs(self.path + '/json/yamahapwc')
             if self.save_file:
                 if not os.path.exists(self.path + 'html/' + self.name + '/children'):
                     os.makedirs(self.path + 'html/' + self.name + '/children')
@@ -194,7 +194,7 @@ class Crawler:
             # print(children)
 
         if len(result) != 0:
-            with open(self.path + '/json/yamahajb/' + self.name + '.json', 'w', encoding='utf-8') as f:
+            with open(self.path + '/json/yamahapwc/' + self.name + '.json', 'w', encoding='utf-8') as f:
                 json.dump(children_s, f, indent=4, ensure_ascii=False)
         return result
 
@@ -230,11 +230,11 @@ class Crawler:
 
 datas = []
 
-arr=get_numbers_without_json('data/json/yamahajb', range(9, 368))
-# arr=get_numbers_without_json('data/json/yamahajb', range(77, 394))
+# arr=get_numbers_without_json('data/json/yamahapwc', range(9, 368))
+arr=get_numbers_without_json('data/json/yamahapwc', range(77, 394))
 print(arr)
 for i in arr:
-    datas.append({'url': 'https://onlinemicrofiche.com/riva_normal/showmodel/13/yamahajb/'+str(i), 'name': 'yamahaatv-'+str(i)})
+    datas.append({'url': 'https://onlinemicrofiche.com/riva_normal/showmodel/13/yamahapwc/'+str(i), 'name': 'yamahaatv-'+str(i)})
 
 # Định nghĩa đối tượng Lock
 
@@ -248,10 +248,11 @@ def process_data(data):
         result = crawler.get_infor_children()
         if not result:
             print("waiting...")
-            time.sleep(5)
+            time.sleep(250)
             crawler.open_windscribe()
+            time.sleep(50)
         else:
             check = False
 
-with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
+with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
     executor.map(process_data, datas)
