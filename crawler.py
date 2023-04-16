@@ -254,5 +254,5 @@ def process_data(data):
         else:
             check = False
 
-with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
+with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
     executor.map(process_data, datas)
