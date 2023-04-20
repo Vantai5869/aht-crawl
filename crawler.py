@@ -248,7 +248,6 @@ def process_data(data):
         result = crawler.get_infor_children()
         if not result:
             print("waiting...")
-            # time.sleep(250)
             crawler.open_windscribe()
             time.sleep(50)
         else:
